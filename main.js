@@ -61,23 +61,41 @@ function displayWeatherInfo(data) {
 }
 
 function getWeatherEmoji(weatherId) {
-  switch (true) {
-    case weatherId >= 200 && weatherId < 300:
-      return '⛈️';
-    case weatherId >= 300 && weatherId < 400:
-      return '🌫️';
-    case weatherId >= 500 && weatherId < 600:
-      return '🌨️';
-    case weatherId >= 600 && weatherId < 700:
-      return '❄️';
-    case weatherId >= 700 && weatherId < 800:
-      return '🌫️';
-    case weatherId === 800:
-      return '☀️';
-    case weatherId >= 801 && weatherId < 810:
-      return '🌫️';
+  switch (weatherId) {
+    case 1000:
+      return '☀️'; // Clear/Sunny
+    case 1003:
+    case 1006:
+      return '⛅'; // Partly Cloudy
+    case 1009:
+      return '☁️'; // Overcast
+    case 1030:
+    case 1135:
+    case 1147:
+      return '🌫️'; // Mist/Fog
+    case 1063:
+    case 1180:
+    case 1183:
+    case 1186:
+    case 1189:
+    case 1192:
+    case 1195:
+      return '🌧️'; // Rain
+    case 1066:
+    case 1210:
+    case 1213:
+    case 1216:
+    case 1219:
+    case 1222:
+    case 1225:
+      return '❄️'; // Snow
+    case 1087:
+      return '⛈️'; // Thunderstorm
+    case 1273:
+    case 1276:
+      return '🌩️'; // Thunder with rain
     default:
-      return '';
+      return '❓'; // Unknown weather
   }
 }
 
