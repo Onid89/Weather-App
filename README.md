@@ -45,7 +45,7 @@ cd weather-app
 ## Usage
 
 1. Open index.html in your web browser.
-2. Replace the placeholder API key (0ae01207c1ea4675b91114110242608) in the main.js file with your own API key from Weather API.
+2. Replace the placeholder API key (---------------) in the main.js file with your own API key from Weather API.
 3. Enter a city name in the input field and press the "Weather" button.
 
 - Example
